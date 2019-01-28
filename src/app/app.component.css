@@ -1,0 +1,51 @@
+html {
+  min-width: 650px;
+}
+
+.container-fluid {
+  min-height: 940px;
+  height: 100vh;
+}
+
+.main-content {
+  height: 100%;
+  margin-left: -15px;
+}
+
+::placeholder {
+  color: #C8C8C8;
+}
+
+@keyframes animated {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.animated {
+  animation-name: animated;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
