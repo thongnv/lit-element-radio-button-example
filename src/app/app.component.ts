@@ -14,6 +14,12 @@ export class AppComponent implements OnInit {
     this.radios = [
       {
         name: 'request',
+        value: 'Machine',
+        selected: true,
+        children: []
+      },
+      {
+        name: 'request',
         value: 'Famille postale',
         selected: false,
         children: [
@@ -27,7 +33,7 @@ export class AppComponent implements OnInit {
       {
         name: 'request',
         value: 'Compte',
-        selected: true,
+        selected: false,
         children: [
           {
             name: 'postal',
@@ -42,5 +48,9 @@ export class AppComponent implements OnInit {
         ]
       }
     ];
+  }
+
+  selectedRadio(e: CustomEvent) {
+    console.log('selected:', e.detail.selectedRadio);
   }
 }
